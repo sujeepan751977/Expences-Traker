@@ -1,10 +1,11 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin-left: 500px;
     margin-right: 500px;
     margin-top: 100px;
-    padding: 0;
+    padding: 10px;
 }
 
 .container {
@@ -31,4 +32,118 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+}
+
+.lets-start-button a {
+    color: #fff;
+    text-decoration: none;
+}
+.lets-start-button:hover {
+    background-color: #218838;
+}
+
+.over-view-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.history a {
+    color: #007bff; 
+    text-decoration: none;
+}
+
+.add-transaction-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.expense-button{
+    background-color: #f31010;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.income-button {
+    background-color: #17b109;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.over-view-box div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.add-transaction {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px ;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto;
+}
+
+.form-control {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.date {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #0db130;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #0a8c24;
+}
+
+input{
+    color: #050000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
 }

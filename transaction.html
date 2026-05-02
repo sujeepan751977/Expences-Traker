@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Transaction</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your New Transaction</h1>
+        <p>Add a new income or expense to your record.</p>
+    </div>
+    
+    <!-- Add Transaction -->
+
+    <div class="add-transaction">
+        <h2>Add New Transaction</h2>
+        <div id="date" class="date">
+            <label>Date</label>
+            <input type="datetime-local" id="date-input">
+        </div>
+        <form id="transaction-form">
+            <div class="form-control">
+                <label for="text">Description</label>
+                <input type="text" id="text" placeholder="Enter description..." required>
+            </div>
+            <div class="form-control">
+                <label for="amount">Amount <br>(negative - expense, positive - income)</label>
+                <input type="number" id="amount" placeholder="Enter amount..." required>
+            </div>
+            <button type="submit" class="btn">Add Transaction</button>
+        </form>
+
+    </div>
+    
+</body>
+</html>
