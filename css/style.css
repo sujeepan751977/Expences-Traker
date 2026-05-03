@@ -22,6 +22,113 @@ body {
     margin-bottom: 20px;
 }
 
+.back-button-wrap {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+.filter-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.filter-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.filter-item {
+    flex: 1;
+    min-width: 180px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.clear-btn {
+    background-color: #555;
+}
+
+.clear-btn:hover {
+    background-color: #333;
+}
+
+.transaction-history {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.transaction-history ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.transaction-history li {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-button {
+    background-color: #0d6efd;
+}
+
+.edit-button:hover {
+    background-color: #0b5ed7;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.delete-button:hover {
+    background-color: #bb2d3b;
+}
+
 .lets-start-button {
     display: block;
     width: 100%;
@@ -138,6 +245,10 @@ label {
     background-color: #0a8c24;
 }
 
+.btn.clear-btn:hover {
+    background-color: #333;
+}
+
 input{
     color: #050000;
     border: none;
@@ -145,5 +256,12 @@ input{
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    
+}
+
+@media screen {
+    body {
+        margin: 20px;
+    }
     
 }

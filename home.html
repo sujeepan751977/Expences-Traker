@@ -3,13 +3,17 @@
 <head>
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="css\style.css">
+    
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Expense Tracker</h1>
         <div class="subtitle">
             <p>Track your expenses and manage your budget effectively.</p>
-        </div>       
+        </div>
+        <div class="back-button-wrap">
+            <a class="back-button" href="index.html">Back</a>
+        </div>
     </div>
 
     <!-- Overview of Balance, Income and Expense -->
@@ -33,11 +37,13 @@
         </div>
 
         <div class="add-transaction-buttons">
-            <button class="income-button" ><a class="btn-link" href="transaction.html">Add Income</a></button>
-            <button class="expense-button" ><a class="btn-link" href="transaction.html">Add Expense</a></button>
+            <button class="income-button" ><a class="btn-link" href="transaction.html?type=income">Add Income</a></button>
+            <button class="expense-button" ><a class="btn-link" href="transaction.html?type=expense">Add Expense</a></button>
         </div>
     </div>
-
+    <script src="js/storage.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/app.js" defer></script>
     
 
     
