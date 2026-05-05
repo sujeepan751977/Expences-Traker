@@ -1,12 +1,9 @@
-// ui.js
-// Functions that update the page: summaries, history list, filters, edit/delete
 
-// Format number to a simple currency string used in the app.
 function formatMoney(amount) {
     return `LKR ${amount.toFixed(2)}`;
 }
 
-// Calculate income, expense and balance from transactions array.
+// Calculate income, expense and balance from transactions
 function calculateSummary(transactions) {
     let income = 0;
     let expense = 0;
@@ -26,7 +23,7 @@ function calculateSummary(transactions) {
     };
 }
 
-// Read the values from the filter inputs on the history page.
+// filter inputs on the history page.
 function getFilterValues() {
     const dateFilter = document.getElementById('filter-date');
     const monthFilter = document.getElementById('filter-month');
@@ -37,7 +34,7 @@ function getFilterValues() {
     };
 }
 
-// Keep only transactions that match the selected date/month filters.
+// date/month filters.
 function filterTransactions(transactions) {
     const filters = getFilterValues();
 
@@ -57,7 +54,7 @@ function filterTransactions(transactions) {
     });
 }
 
-// Update the small summary boxes on the dashboard (Balance, Income, Expense).
+// Update the small summary boxes 
 function updateSummaryOnPage() {
     const transactions = getTransactions();
     const summary = calculateSummary(transactions);
@@ -80,7 +77,7 @@ function updateSummaryOnPage() {
 }
 
 // Render the list of transactions on the history page.
-// Each item shows date, description, amount and has Edit/Delete buttons.
+
 function renderTransactionHistory() {
     const transactionList = document.getElementById('transaction-list');
 
@@ -110,7 +107,7 @@ function renderTransactionHistory() {
 
         info.textContent = `${shownDate} | ${transaction.text} | ${sign}${formatMoney(amount)}`;
 
-        // Edit button opens simple prompts to change the transaction.
+        // Edit button 
         editButton.textContent = 'Edit';
         editButton.type = 'button';
         editButton.className = 'action-button edit-button';
@@ -118,7 +115,7 @@ function renderTransactionHistory() {
             editTransaction(transaction.id);
         });
 
-        // Delete button asks for confirmation then removes the item.
+        // Delete button
         deleteButton.textContent = 'Delete';
         deleteButton.type = 'button';
         deleteButton.className = 'action-button delete-button';
@@ -136,7 +133,7 @@ function renderTransactionHistory() {
     });
 }
 
-// Delete a transaction by id and update UI/storage.
+// Delete a transaction by id
 function deleteTransaction(id) {
     const transactions = getTransactions();
     const updatedTransactions = transactions.filter(function (transaction) {
@@ -154,7 +151,7 @@ function deleteTransaction(id) {
     updateSummaryOnPage();
 }
 
-// Edit a transaction using simple prompt boxes (beginner-friendly).
+// Edit a transaction
 function editTransaction(id) {
     const transactions = getTransactions();
     const transaction = transactions.find(function (item) {
@@ -195,7 +192,7 @@ function editTransaction(id) {
     updateSummaryOnPage();
 }
 
-// Wire up simple filter buttons on the history page.
+// filter button
 function setupFilters() {
     const applyButton = document.getElementById('apply-filter-button');
     const clearButton = document.getElementById('clear-filter-button');

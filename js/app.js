@@ -1,7 +1,4 @@
-// app.js
-// Form handling and initialization. Uses storage.js and ui.js helper functions.
 
-// Read the `type` parameter from the URL. It tells us if this form is
 // adding an 'income' or an 'expense'.
 function getTransactionType() {
     const query = new URLSearchParams(window.location.search);
@@ -14,8 +11,7 @@ function getTransactionType() {
     return 'income';
 }
 
-// Change the small title/description/button text on the transaction page
-// so the user sees whether they are adding income or expense.
+//  adding income or expense.
 function updateTransactionPageText(type) {
     const title = document.querySelector('.container h1');
     const description = document.querySelector('.container p');
@@ -49,7 +45,7 @@ function updateTransactionPageText(type) {
     }
 }
 
-// Handle the form submit on the transaction page.
+
 // This will store a new transaction in localStorage.
 function handleTransactionForm() {
     const form = document.getElementById('transaction-form');
@@ -63,10 +59,9 @@ function handleTransactionForm() {
     const textInput = document.getElementById('text');
     const amountInput = document.getElementById('amount');
 
-    // Update the page text so the user knows what they are adding.
     updateTransactionPageText(transactionType);
 
-    // Set the date input to the current date/time if it is empty.
+    // Set current date/time 
     if (dateInput && !dateInput.value) {
         const today = new Date();
         dateInput.value = today.toISOString().slice(0, 16);
@@ -97,13 +92,12 @@ function handleTransactionForm() {
         transactions.push(transaction);
         saveTransactions(transactions);
 
-        // Clear the form and go to history page to see the result.
+
         form.reset();
         window.location.href = 'history.html';
     });
 }
 
-// Initialize app on pages after the DOM is ready.
 document.addEventListener('DOMContentLoaded', function () {
     updateSummaryOnPage();
     renderTransactionHistory();
